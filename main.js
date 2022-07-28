@@ -166,11 +166,7 @@ const total = document.querySelector(".currentTotal");
 const icon_avatar = document.querySelector(".icon-avatar");
 
 icon_cart.addEventListener("click", () => {
-  cart_order.style.display = "block";
-});
-
-icon_avatar.addEventListener("click", () => {
-  cart_order.style.display = "none";
+  cart_order.classList.toggle("show");
 });
 
 // Add to cart
@@ -180,9 +176,8 @@ addCart.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (a == 0) {
-    alert("Add to count");
+    alert("Add Item");
   } else {
-    cart_order.style.display = "block";
     empty_cart.style.display = "none";
     added_cart.style.display = "block";
     cart_count.style.display = "block";
@@ -201,7 +196,6 @@ del_btn.addEventListener("click", () => {
 
 // checkout
 checkout.addEventListener("click", () => {
-  cart_order.style.display = "none";
   cart_count.style.display = "none";
   added_cart.style.display = "none";
   empty_cart.style.display = "block";
