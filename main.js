@@ -132,7 +132,6 @@ prev.forEach((prev) => {
 
 startSlide();
 d_startSlide();
-// m_startSlide();
 beginSlide();
 
 // counter
