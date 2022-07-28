@@ -354,6 +354,12 @@ li {
   font-weight: 700;
 }
 
+.minus,
+.plus,
+.count {
+  cursor: pointer;
+}
+
 #form {
   display: flex;
   justify-content: center;
@@ -361,13 +367,14 @@ li {
   background: var(--Orange);
   padding: 1rem;
   border-radius: 0.5rem;
-}
-
-input[type="submit"] {
-  background: none;
-  margin-left: 1rem;
+  width: 100%;
   font-size: 1rem;
   color: var(--White);
+  cursor: pointer;
+}
+
+.cart-form {
+  margin-right: 1rem;
 }
 
 .desktop-sneakers {
@@ -444,9 +451,6 @@ input[type="submit"] {
   #form {
     padding: 1.5rem;
     border-radius: 0.5rem;
-  }
-
-  input[type="submit"] {
     font-size: 1.3rem;
   }
 }
@@ -657,7 +661,7 @@ input[type="submit"] {
   }
 
   .counter {
-    padding: 0.7rem;
+    padding: 0.9rem;
     width: 40%;
   }
 
@@ -666,12 +670,9 @@ input[type="submit"] {
   }
 
   #form {
-    height: 2rem;
+    height: 0.5rem;
     margin-top: 1.5rem;
     width: 60%;
-  }
-
-  input[type="submit"] {
     font-size: 0.8rem;
   }
 
@@ -736,6 +737,7 @@ input[type="submit"] {
 
   .s_sneaker img {
     border: 0.1rem solid transparent;
+    cursor: pointer;
   }
 
   .product img:hover,

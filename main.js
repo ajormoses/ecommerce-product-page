@@ -7,6 +7,7 @@ icon_toggle.addEventListener("click", () => {
   close.classList.toggle("show");
   hamburger.classList.toggle("show");
   menu.classList.toggle("show");
+  cart_order.style.display = "none";
 });
 
 // slider
@@ -211,15 +212,20 @@ icon_avatar.addEventListener("click", () => {
 // Add to cart
 const addCart = document.querySelector("#form");
 
-addCart.addEventListener("submit", (e) => {
+addCart.addEventListener("click", (e) => {
   e.preventDefault();
-  cart_order.style.display = "block";
-  empty_cart.style.display = "none";
-  added_cart.style.display = "block";
-  cart_count.style.display = "block";
-  cart_count.innerHTML = a;
-  currentCount.innerHTML = a;
-  total.innerHTML = `$${125 * a}`;
+
+  if (a == 0) {
+    alert("Add to count");
+  } else {
+    cart_order.style.display = "block";
+    empty_cart.style.display = "none";
+    added_cart.style.display = "block";
+    cart_count.style.display = "block";
+    cart_count.innerHTML = a;
+    currentCount.innerHTML = a;
+    total.innerHTML = `$${125 * a}`;
+  }
 });
 
 // Empty cart
