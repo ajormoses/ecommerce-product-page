@@ -7,7 +7,7 @@ icon_toggle.addEventListener("click", () => {
   close.classList.toggle("show");
   hamburger.classList.toggle("show");
   menu.classList.toggle("show");
-  cart_order.style.display = "none";
+  cart_order.classList.toggle("show");
 });
 
 // slider
@@ -192,6 +192,11 @@ del_btn.addEventListener("click", () => {
   empty_cart.style.display = "block";
   added_cart.style.display = "none";
   cart_count.style.display = "none";
+
+  if (count != 0) {
+    a = 0;
+    count.innerHTML = a;
+  }
 });
 
 // checkout
@@ -199,6 +204,7 @@ checkout.addEventListener("click", () => {
   cart_count.style.display = "none";
   added_cart.style.display = "none";
   empty_cart.style.display = "block";
+  cart_order.classList.toggle("show");
 
   if (count != 0) {
     a = 0;
