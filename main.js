@@ -199,6 +199,11 @@ checkout.addEventListener("click", () => {
   cart_count.style.display = "none";
   added_cart.style.display = "none";
   empty_cart.style.display = "block";
+
+  if (count != 0) {
+    a = 0;
+    count.innerHTML = a;
+  }
 });
 
 // desktop Sneakers
