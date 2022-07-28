@@ -201,6 +201,10 @@ li {
   background: var(--Dark-grayish-blue);
 }
 
+.sneaker-list-desktop {
+  display: none;
+}
+
 .autumn h1 {
   padding: 0;
   font-size: 1rem;
@@ -468,6 +472,25 @@ li {
     display: none;
   }
 
+  .sneaker-list {
+    display: none;
+  }
+
+  .sneaker-list-desktop {
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: var(--Dark-grayish-blue);
+  }
+
+  .sneaker-list-desktop-content {
+    display: flex;
+    justify-content: space-between;
+    width: 400%;
+  }
+
   header {
     position: absolute;
     padding: 0.5rem 0 0rem;
@@ -588,7 +611,15 @@ li {
   .main-sneaker {
     margin-bottom: 1rem;
     border-radius: 1rem;
+    width: 100%;
+    overflow: hidden;
     cursor: pointer;
+  }
+
+  .main-sneaker-slider {
+    display: flex;
+    justify-content: space-between;
+    width: 400%;
   }
 
   .main-sneaker img {
@@ -607,6 +638,7 @@ li {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    width: 97%;
   }
 
   .secondArticle {

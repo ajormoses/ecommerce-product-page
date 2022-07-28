@@ -13,7 +13,6 @@ icon_toggle.addEventListener("click", () => {
 // slider
 const slide = document.querySelectorAll(".slide");
 const slider = document.querySelectorAll(".slider");
-const m_slider = document.querySelectorAll(".m-sneaker");
 const d_slider = document.querySelectorAll(".desktop-slide");
 const next = document.querySelectorAll(".arrow-right");
 const prev = document.querySelectorAll(".arrow-left");
@@ -21,7 +20,6 @@ const prev = document.querySelectorAll(".arrow-left");
 var current = 0;
 var start = 0;
 var d_current = 0;
-var m_current = 0;
 
 function reset() {
   for (let i = 0; i < slide.length; i++) {
@@ -32,12 +30,6 @@ function reset() {
 function d_reset() {
   for (let x = 0; x < d_slider.length; x++) {
     d_slider[x].style.display = "none";
-  }
-}
-
-function m_reset() {
-  for (let m = 0; m < m_slider.length; m++) {
-    m_slider[m].style.display = "none";
   }
 }
 
@@ -57,11 +49,6 @@ function d_startSlide() {
   d_slider[0].style.display = "block";
 }
 
-function m_startSlide() {
-  m_reset();
-  m_slider[0].style.display = "block";
-}
-
 function beginSlide() {
   restart();
   slider[0].style.display = "block";
@@ -77,12 +64,6 @@ function d_left() {
   d_reset();
   d_slider[d_current - 1].style.display = "block";
   d_current--;
-}
-
-function m_left() {
-  m_reset();
-  m_slider[m_current - 1].style.display = "block";
-  m_current--;
 }
 
 function moveleft() {
@@ -103,12 +84,6 @@ function d_right() {
   d_current++;
 }
 
-function m_right() {
-  m_reset();
-  m_slider[m_current + 1].style.display = "block";
-  m_current++;
-}
-
 function moveright() {
   restart();
   slider[start + 1].style.display = "block";
@@ -126,11 +101,6 @@ next.forEach((next) => {
       d_current = -1;
     }
     d_right();
-
-    if (m_current === m_slider.length - 1) {
-      m_current = -1;
-    }
-    m_right();
 
     if (start === slider.length - 1) {
       start = -1;
@@ -152,11 +122,6 @@ prev.forEach((prev) => {
     }
     d_left();
 
-    if (m_current === 0) {
-      m_current = m_slider.length;
-    }
-    m_left();
-
     if (start === 0) {
       start = slider.length;
     }
@@ -167,7 +132,7 @@ prev.forEach((prev) => {
 
 startSlide();
 d_startSlide();
-m_startSlide();
+// m_startSlide();
 beginSlide();
 
 // counter
@@ -254,4 +219,29 @@ main_sneaker.addEventListener("click", () => {
 
 icon_delete.addEventListener("click", () => {
   desktop_slider.style.display = "none";
+});
+
+// desktop sneakers slider
+const thumbnails = document.querySelectorAll(".s_sneaker");
+const cart_slider = document.querySelector(".sneaker-list-desktop-content");
+const s_slider = document.querySelector(".main-sneaker-slider");
+
+thumbnails[0].addEventListener("click", () => {
+  s_slider.style.transform = "translate(0)";
+  cart_slider.style.transform = "translate(0)";
+});
+
+thumbnails[1].addEventListener("click", () => {
+  s_slider.style.transform = "translate(-25.5%)";
+  cart_slider.style.transform = "translate(-25.5%)";
+});
+
+thumbnails[2].addEventListener("click", () => {
+  s_slider.style.transform = "translate(-51%)";
+  cart_slider.style.transform = "translate(-51%)";
+});
+
+thumbnails[3].addEventListener("click", () => {
+  s_slider.style.transform = "translate(-76.5%)";
+  cart_slider.style.transform = "translate(-76.5%)";
 });
