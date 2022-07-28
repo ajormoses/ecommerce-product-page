@@ -13,7 +13,7 @@ Thanks for checking out this front-end coding challenge.
 
 - [Links](#links)
 - Solution URL: [ https://github.com/ajormoses/ecommerce-product-page.git ]
-- Live Site URL: [ https://ajormoses.github.io/ecommerce-product-page/ ]
+- Live Site URL: [https://ajormoses-ecommerce-product.netlify.app/ ]
 
 - [Built with](#built-with)
   I use HTML, CSS, JAVASCRIPT to build this design
