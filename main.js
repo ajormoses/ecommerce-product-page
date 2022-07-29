@@ -7,7 +7,6 @@ icon_toggle.addEventListener("click", () => {
   close.classList.toggle("show");
   hamburger.classList.toggle("show");
   menu.classList.toggle("show");
-  cart_order.classList.toggle("show");
 });
 
 // slider
